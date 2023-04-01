@@ -4,7 +4,8 @@
 
 ## Installation
 
-# List buckets
+
+```# List buckets
 {:ok, bucket_names} = AwsS3Wrapper.list_buckets()
 IO.inspect(bucket_names)
 
@@ -15,7 +16,7 @@ IO.inspect(object_keys)
 # Upload a file to S3
 {:ok, etag} = AwsS3Wrapper.upload_file("my-bucket", "path/to/local/file.txt", "path/in/s3/file.txt")
 IO.inspect(etag)
-
+```
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 by adding `aws_wrapper` to your list of dependencies in `mix.exs`:
